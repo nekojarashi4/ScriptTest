@@ -25,9 +25,9 @@ public class Boss
     public void Magic()
     {
 
-        if (mp >= 10)
+        if (mp >= 5)
         {
-            this.mp -= 8;
+            this.mp -= 5;
             Debug.Log("魔法攻撃をした。残りMPは" + mp + "。");
         }
         else
@@ -45,6 +45,11 @@ public class Test : MonoBehaviour {
 
     void Start()
     {
+        float a = 4.5f;
+        a=Mathf.Round(a);
+        Debug.Log(a);
+
+
         Boss lastboss = new Boss();
 
         lastboss.Attack();
@@ -52,12 +57,12 @@ public class Test : MonoBehaviour {
         lastboss.Defence(3);
 
 
-        for (int i = 0; i <= 9; i++)
+        for (int i = 0; i <= 10; i++)
         {
-            if (i <= 10)
-            {
+           
+            
                 lastboss.Magic();
-            }
+            
         }
         
 
